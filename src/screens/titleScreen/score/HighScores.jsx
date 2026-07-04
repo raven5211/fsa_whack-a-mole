@@ -17,10 +17,11 @@ export default function HighScores() {
       <div className="scores">
         <h2>High Scores</h2>
         <ul>
-          {scores.map((score) => {
-            console.log(score);
-            return <Score key={score.id} score={score} />;
-          })}
+          {scores
+            .sort((a, b) => b.score - a.score)
+            .map((score) => {
+              return <Score key={score.id} score={score} />;
+            })}
         </ul>
       </div>
     );

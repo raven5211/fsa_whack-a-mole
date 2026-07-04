@@ -4,7 +4,7 @@ const GameContext = createContext();
 
 export function GameProvider({ children }) {
   const [isInGame, setIsInGame] = useState(false);
-  const [scores, setScores] = useState([{ id: 0, score: 0 }]);
+  const [scores, setScores] = useState([]);
   const [currentScore, setCurrentScore] = useState(0);
   const [timeRemaining, setTimeRemaining] = useState(15);
 
