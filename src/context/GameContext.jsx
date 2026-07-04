@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 const GameContext = createContext();
 
@@ -7,6 +7,20 @@ export function GameProvider({ children }) {
   const [scores, setScores] = useState([]);
   const [currentScore, setCurrentScore] = useState(0);
   const [timeRemaining, setTimeRemaining] = useState(15);
+  const [timerInterval, setTimerInterval] = useState();
+
+  function startGame() {
+    setCurrentScore(0);
+    setTimeRemaining(15);
+    setIsInGame(true);
+  }
+
+  function endGame() {
+    setScores([...scores, { id: scores.length, score: currentScore }]);
+    clearInterval(timerInterval);
+    setTimerInterval(null);
+    setIsInGame(false);
+  }
 
   const value = {
     isInGame,
@@ -17,6 +31,8 @@ export function GameProvider({ children }) {
     setCurrentScore,
     timeRemaining,
     setTimeRemaining,
+    startGame,
+    endGame,
   };
   return <GameContext.Provider value={value}>{children}</GameContext.Provider>;
 }
