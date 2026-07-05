@@ -1,0 +1,26 @@
+.hole {
+  background: url("/hole.png") no-repeat center/contain;
+  height: 100%;
+}
+
+.mole {
+  background-image: url("/mole.png");
+  cursor: pointer;
+}
+
+.moleField {
+  list-style: none;
+  padding: 0;
+  width: 30rem;
+  height: 25rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  place-items: center;
+}
+
+li {
+  width: 5rem;
+  height: 5rem;
+}

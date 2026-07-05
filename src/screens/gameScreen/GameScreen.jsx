@@ -4,7 +4,7 @@ import MoleField from "./game/MoleField";
 
 export default function GameScreen() {
   return (
-    <div className="GameScreen">
+    <div className="game screen">
       <DuringGameHeader />
       <MoleField />
     </div>

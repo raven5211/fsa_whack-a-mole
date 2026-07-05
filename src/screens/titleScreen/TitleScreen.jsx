@@ -4,7 +4,7 @@ import HighScores from "./score/HighScores";
 
 export default function TitleScreen() {
   return (
-    <div className="titleScreen">
+    <div className="title screen">
       <OutOfGameHeader />
       <HighScores />
     </div>

@@ -4,5 +4,5 @@ import { UseGame } from "../../../context/GameContext";
 export default function CurrentScore() {
   const { currentScore } = UseGame();
 
-  return <p className="currentScore">Score: {currentScore}</p>;
+  return <p className="pseudoButton currentScore">Score: {currentScore}</p>;
 }

@@ -3,15 +3,33 @@
   flex-direction: column;
   align-items: center;
   width: 15rem;
+  margin: 0 auto;
 }
 
 .header.outOfGame button {
   width: 100%;
-  height: 1.5rem;
-  background-color: white;
-  border: 2px solid black;
+  height: 1.75rem;
 }
 
-p {
+.header.outOfGame p {
   margin: 0.25rem;
+}
+
+.header.duringGame {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+
+.pseudoButton {
+  padding: 0.25rem;
+  margin: 0;
+  flex-grow: 1;
+  border: 1px solid black;
+  text-align: center;
+}
+
+button {
+  flex-grow: 1;
+  cursor: pointer;
 }

@@ -7,7 +7,7 @@ export default function DuringGameHeader() {
   return (
     <div className="header duringGame">
       <CurrentScore />
-      {/* <TimeRemaining /> */}
+      {/* <TimeRemaining className="pseudoButton" /> */}
       <RestartButton />
     </div>
   );

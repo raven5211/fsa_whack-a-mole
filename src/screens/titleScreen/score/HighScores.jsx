@@ -19,6 +19,7 @@ export default function HighScores() {
         <ul>
           {scores
             .sort((a, b) => b.score - a.score)
+            .slice(0, 5)
             .map((score) => {
               return <Score key={score.id} score={score} />;
             })}
